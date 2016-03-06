@@ -35,8 +35,9 @@ class Movie {
   }
   addInfo(obj) {
     var descricao = obj.descricao.split("\n");
+    var age = /([0-9]\w+)/.exec(descricao[1].split(" - ")[1]);
     this.genre = descricao[1].split(" - ")[0];
-    this.age = /([0-9]\w+)/.exec(descricao[1].split(" - ")[1])[0];
+    this.age = (age ? age[0] : "Livre");
     this.duration = /([0-9]\w+)/.exec(descricao[1].split(" - ")[2])[0];
     this.synopsis = obj.sinopse;
     this.idYoutube = obj.idYoutube;
@@ -95,10 +96,11 @@ function setMovieInfo(id, cineid, i) {
       movie.addInfo(JSON.parse(body).filme[0])
     })
     .catch(function(err) {
+      console.log("AA")
     })
 }
 
 
 setInterval(function() {
-  console.log(Conteudo[0].movies[0])
+  console.log(Conteudo[0].movies)
 }, 5000)
