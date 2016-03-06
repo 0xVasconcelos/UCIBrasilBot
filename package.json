@@ -1,0 +1,30 @@
+{
+  "name": "ucibrasilbot",
+  "version": "1.0.0",
+  "description": "O bot que lista filmes em cartaz da rede de cinemas UCI",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucaslg26/UCIBrasilBot.git"
+  },
+  "keywords": [
+    "bot",
+    "cinema",
+    "brasil",
+    "UCI",
+    "cartaz"
+  ],
+  "author": "Lucas Vasconcelos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucaslg26/UCIBrasilBot/issues"
+  },
+  "homepage": "https://github.com/lucaslg26/UCIBrasilBot#readme",
+  "dependencies": {
+    "lodash": "^4.6.1",
+    "request-promise": "^2.0.1"
+  }
+}
