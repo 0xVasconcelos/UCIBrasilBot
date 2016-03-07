@@ -142,7 +142,9 @@ bot.onText(/\/cinemas/, function(msg, match) {
     reply_to_message_id: msg.message_id,
     reply_markup: JSON.stringify({
       keyboard: cinemas,
-      one_time_keyboard: true
+      one_time_keyboard: true,
+      selective: true,
+      hide_keyboard: true
     })
   }
   bot.sendMessage(msg.chat.id, "Escolha o cinema mais próximo de você :)", opt);
@@ -163,7 +165,9 @@ bot.onText(/(UCI.+)/, function(msg, match) {
       reply_to_message_id: msg.message_id,
       reply_markup: JSON.stringify({
         keyboard: filmes,
-        one_time_keyboard: true
+        one_time_keyboard: true,
+        selective: true,
+        hide_keyboard: true
       })
     }
     userSessions[msg.chat.id] = {
@@ -206,7 +210,9 @@ bot.onText(/^(?!UCI|SINOPSE|ATORES|TRAILER|ATORES)(.+)/, function(msg, match) {
             ['ATORES'],
             ['/cinemas']
           ],
-          one_time_keyboard: true
+          one_time_keyboard: true,
+          selective: true,
+          hide_keyboard: true
         })
       }
       bot.sendMessage(msg.chat.id, text);
