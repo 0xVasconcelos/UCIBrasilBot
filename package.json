@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/lucaslg26/UCIBrasilBot#readme",
   "dependencies": {
+    "botanio": "0.0.6",
     "lodash": "^4.6.1",
+    "node-telegram-bot-api": "^0.20.1",
     "request-promise": "^2.0.1"
   }
 }
