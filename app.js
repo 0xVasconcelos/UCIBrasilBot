@@ -16,12 +16,10 @@ var userSessions = [];
 
 cinemaAPI.pollingInterval = "500000"; // definir tempo para atualizar o cartaz
 
-//endpoints sda API do UCI
-
+//endpoints da API do UCI
 cinemaAPI.cinemas = 'http://m.ucicinemas.com.br/json/Cinemas.php';
 cinemaAPI.cinema = 'http://m.ucicinemas.com.br/json/Cinema.php?idCinema=';
 cinemaAPI.filme = 'http://m.ucicinemas.com.br/json/filme.php?idFilme=';
-
 
 // classes
 class Cinema {
@@ -65,7 +63,6 @@ class Sessions {
     this.time = obj.hora;
   }
 }
-
 
 var parseAPI = function() {
   rp(cinemaAPI.cinemas)
@@ -112,7 +109,6 @@ function setMovieInfo(id, cineid, i) {
 
 parseAPI();
 setInterval(parseAPI, cinemaAPI.pollingInterval);
-
 
 bot.onText(/\/ajuda/, function(msg, match) {
   var text = "Bem-vindo ao bot do UCI, comigo você poderá saber o que está em cartaz hoje nos cinemas UCI mais próximo de você ;) \nComandos: \n/cinemas\n\nQualquer dúvida ou sugestão, entrar em contato com @vasconcelos";
