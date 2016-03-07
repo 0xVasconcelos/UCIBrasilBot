@@ -12,7 +12,7 @@ var bot = new TelegramBot(process.argv[2], {
 
 var Conteudo = [];
 var cinemaAPI = {};
-var userSessions = [];
+var userSessions = {};
 
 cinemaAPI.pollingInterval = "500000"; // definir tempo para atualizar o cartaz
 
