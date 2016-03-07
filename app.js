@@ -67,7 +67,7 @@ class Sessions {
 var parseAPI = function() {
   rp(cinemaAPI.cinemas)
     .then(function(data) {
-      Conteudo = [];
+      Conteudo = {};
       data = JSON.parse(data).cinemas;
       for (var i in data)
         Conteudo.push(new Cinema(data[i]))
